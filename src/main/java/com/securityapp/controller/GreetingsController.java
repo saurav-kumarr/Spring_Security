@@ -82,7 +82,7 @@ public class GreetingsController {
                 .collect(Collectors.toList());
 
         LoginResponse response = new LoginResponse(userDetails.getUsername(),
-                jwtToken,roles);
+                roles,jwtToken);
         return ResponseEntity.ok(response);
     }
 }
